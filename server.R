@@ -1,4 +1,4 @@
-#library(shiny)
+library(shiny)
 
 data(sunspots)
 dfltYearRange <- c(1800, 1899)
