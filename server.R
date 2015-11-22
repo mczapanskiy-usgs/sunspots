@@ -3,6 +3,9 @@
 # Bob Hamilton, bobha@seanet.com
 #
 
+library(shiny)
+
+library(datasets)
 data(sunspot.month)
 ss <- sunspot.month				## choose sunspots or sunspot.month
 

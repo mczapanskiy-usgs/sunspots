@@ -3,6 +3,21 @@
 # Bob Hamilton, bobha@seanet.com
 #
 
+library(shiny)
+
+library(datasets)
+data(sunspot.month)
+ss <- sunspot.month				## choose sunspots or sunspot.month
+
+minYear <- ceiling(tsp(ss)[1])		## first full year
+maxYear <- floor(tsp(ss)[2] - 11/12)	## last full year
+
+## condition default values
+dfltYearRange <- c(1800, 1899)
+dfltPlotType <- "p"
+dfltBinSize <- 25
+
+
 shinyUI(
 	pageWithSidebar(
 		headerPanel("Sunspots"),
